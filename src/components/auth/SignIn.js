@@ -35,7 +35,9 @@ class SignIn extends Component {
                 </div>
                 <div className="input-field">
                     <button className="btn bg-info">LogIn</button>
-                    <div className="text-danger center">{ authError ? <p>{ authError }</p>: null}</div>
+                    <div className="text-danger center">
+                      { authError ? <p>{ authError }</p>: null}
+                    </div>
                 </div>
             </form>
             </div>

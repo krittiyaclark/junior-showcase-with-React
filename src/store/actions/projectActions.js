@@ -9,9 +9,9 @@ export const createProject = (project) => {
             authorId: '12345',
             createdAt: new Date()
         }).then(() => {
-            dispatch({ type: 'CREATE_PROJECT_SUCCESS' });
+            dispatch({ type: 'CREATE_PROJECT', project });
         }).catch((err) => {
-            dispatch({ type: 'CREATE_PROJECT_ERROR', err });
+            dispatch({ type: 'CREATE_PROJECT_ERROR'}, err );
         })
         
     }
