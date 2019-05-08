@@ -4,7 +4,11 @@ import SignedInLinks from './SignedInLinks';
 import SignedOutLinks from './SignedOutLinks';
 import { connect } from 'react-redux';
 
-const Navbar = () => {
+const Navbar = (props) => {
+    const { auth } = props;
+    console.log(auth);
+
+    const links = auth.uid ? <SignedInLinks /> : <SignedOutLinks />;
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-0 h1">
             <div className="container">
@@ -13,8 +17,7 @@ const Navbar = () => {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">     
-                    <SignedOutLinks />   
-                    <SignedInLinks />
+                    { links }
                 </div>  
             </div>
         </nav>
