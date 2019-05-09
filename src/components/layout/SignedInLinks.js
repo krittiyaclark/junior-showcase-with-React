@@ -13,7 +13,9 @@ const SignedInLinks = (props) => {
                 <a onClick={props.signOut}>Log Out</a>
             </li>
             <li className="nav-item">
-                <NavLink to="/" className="btn bg-info rounded-circle nav-link">CK</NavLink>
+                <NavLink to="/" className="btn bg-info rounded-circle nav-link">
+                    {props.profile.initials}
+                </NavLink>
             </li>
         </ul>
     )
