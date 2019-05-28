@@ -14,9 +14,9 @@ const Notifications = (props) => {
                             { notifications && notifications.map(item => {
                                 return (
                                     <li key={item.id}>
-                                        <span className="text-success">{item.user} </span>
+                                        <span className="text-info">{item.user} </span>
                                         <span>{item.content}</span>
-                                        <div className="note-date text-secondary">
+                                        <div className="note-date text-info">
                                             {moment(item.time.toDate()).fromNow()}
                                         </div>
                                     </li>
